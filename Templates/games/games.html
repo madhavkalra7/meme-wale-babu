@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='games.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Additional CSS styles */
+    </style>
+</head>
+<body>
+    <div class="embedded-game" id="game1">
+        <!-- Embedded game 1 -->
+        <script src="https://cdn.htmlgames.com/embed.js?game=HappyBird&amp;bgcolor=white">
+        </script>
+    </div>
+    <div class="embedded-game" id="game2">
+        <script src="https://cdn.htmlgames.com/embed.js?game=Hashiwokakero&amp;bgcolor=white">
+    </script>
+    </div>
+
+    <div class="embedded-game" id="game3">
+    <script src="https://cdn.htmlgames.com/embed.js?game=BeijingHiddenObjects&amp;bgcolor=white">
+    </script>
+    </div>
+
+    <div class="embedded-game" id="game4">
+    <script src="https://cdn.htmlgames.com/embed.js?game=ColorCircle&amp;bgcolor=white">
+    </script>
+    </div>
+
+    <div class="embedded-game" id="game5">
+    <script src="https://cdn.htmlgames.com/embed.js?game=NeonDots&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game6">
+    <script src="https://cdn.htmlgames.com/embed.js?game=TicTacToe&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game7">
+    <script src="https://cdn.htmlgames.com/embed.js?game=Ludo&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game8">
+    <script src="https://cdn.htmlgames.com/embed.js?game=RocketTap&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game9">
+    <script src="https://cdn.htmlgames.com/embed.js?game=StolenArt&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game10">
+    <script src="https://cdn.htmlgames.com/embed.js?game=BounceBall&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game11">
+    <script src="https://cdn.htmlgames.com/embed.js?game=CatchTheThief&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game12">
+    <script src="https://cdn.htmlgames.com/embed.js?game=SlideAndRoll&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game13">
+    <script src="https://cdn.htmlgames.com/embed.js?game=TrafficRacer&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game14">
+    <script src="https://cdn.htmlgames.com/embed.js?game=PlaygroundDifferences&amp;bgcolor=white"></script>
+    </div>
+
+    <div class="embedded-game" id="game15">
+        <script src="https://cdn.htmlgames.com/embed.js?game=PinballBreakout&amp;bgcolor=white"></script>
+    </div>
+
+
+    <!-- Add the "Surprise Me" button -->
+    <div class="balloon">
+        <button class="balloon-text" onclick="setupSurpriseButton()">Surprise Here</button>
+    </div>
+    
+    <!-- Include your JavaScript file at the end of the body -->
+    <script src="{{ url_for('static', filename='games.js') }}"></script>
+
+</body>
+</html>

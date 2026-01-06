@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin: 30px;
+    background-image: url("gaming.jpg");
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    background-position: center; /* Center the background image */
+    font-family: Arial, sans-serif; /* Use a commonly available font */
+}
+
+.embedded-game {
+    width: 90%; /* Adjust the width of game containers */
+    max-width: 600px; /* Limit maximum width for better readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+    border-radius: 10px; /* Add rounded corners to the game containers */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    padding: 20px; /* Add padding for spacing inside the game containers */
+}
+
+.embedded-game:nth-child(odd) {
+    transform: rotate(-2deg); /* Apply a slight rotation to odd numbered games for variety */
+}
+
+.embedded-game:nth-child(even) {
+    transform: rotate(2deg); /* Apply a slight rotation to even numbered games for variety */
+}
+
+.embedded-game script {
+    width: 100%; /* Ensure game scripts fill their containers */
+    height: 400px; /* Set a fixed height for the games */
+}
+
+h1 {
+    color: #fff; /* Set heading color to white */
+    text-align: center; /* Center align the heading */
+}
+
+/* Style links */
+a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+}
+
+/*BALLOON PORTION */
+.balloon > button {
+    position: fixed;
+    bottom: 20px;
+    right: -690px; /* Adjust the right distance */
+    /* Adjust other styles as needed */
+    background-color: #ff5722;
+    border:none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    animation: swing 1s infinite;
+}
+
+
+.balloon-text {
+    font-weight: bold;
+    margin: 0;
+    text-decoration: yellow;
+}
+
+@keyframes swing {
+    0% { transform: translateX(-500%) rotate(0deg); }
+    50% { transform: translateX(-500%) rotate(15deg); }
+    100% { transform: translateX(-500%) rotate(0deg); }
+}

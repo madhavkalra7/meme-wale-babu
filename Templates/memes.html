@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meme Wale Babu</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='memes.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <style>
+    /* Additional CSS styles */
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+    <a class="navbar-brand" href="">
+      <span style="color:red; font-size:50px">M</span>eme <span style="color: red;">W</span>ale <span
+        style="color: red;">B</span>abu
+    </a>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url_for('static',filename='memehome.jpg') }}">Meme's Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ url_for('profile') }}"class="nav-link" href="">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ url_for('games') }}" id="games-link">2D Games</a>
+        </li> <!-- Games column -->
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('static',filename='games_3d.html') }}">3D Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('signup') }}">Sign up</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="flexs">
+    <div class="indicator" id="audio-indicator" style="height:auto; width:auto;">Click on the image for Audio Play/Pause
+    </div> <!-- Indicator for audio -->
+    <img id="foo" src="{{ url_for('static',filename='crocodile.jpg') }}" alt="unfinished bingo card"
+      style="height: 750px;" />
+
+    <div>
+      <h1
+        style="width: 90%; margin-left: 35px; margin-top: 25px; color: whitesmoke; background-color: black; text-align: center; padding: 0px 20px 0px 20px;">
+        Random Meme Generator</h1>
+      <div class="container">
+        <div class="main">
+          <p id="meme-title"></p>
+          <img src="" alt="" id="meme-img">
+          <div>
+            <small id="meme-author"></small>
+          </div>
+        </div>
+        <div class="balloon">
+          <button class="balloon-text" onclick="setupSurpriseButton()">Surprise Here</button>
+        </div>
+        <div id="gallery" class="hidden">
+          <!-- This section will contain the 10 photos -->
+        </div>
+        <button id="meme-generator">Generate Meme</button>
+      </div>
+      <!-- <div>
+            <button id="download-meme">Download Meme</button>
+        </div> -->
+    </div>
+  </div>
+
+  <!-- Script JS -->
+  <script src="{{ url_for('static',filename='memes.js') }}"></script>
+
+</body>
+
+</html>

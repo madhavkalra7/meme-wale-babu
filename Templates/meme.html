@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Meme Generator</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='meme.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static',filename='crocodile.jpg') }}"); /* Replace with your image path */
+            /* Other background styles */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="margin-left:47%;max-width:50%;color:whitesmoke;background-color:black;text-align:center;padding:0px 20px 0px 20px;">Random Meme Generator</h1>
+    <div class="container">
+        <div class="main">
+            <p id="meme-title"></p>
+            <img src="" alt="" id="meme-img">            <div>
+                <small id="meme-author"></small>
+            </div>
+        </div>
+        <div class="balloon">
+            <p class="balloon-text">Surprise Here</p>
+        
+    </div>
+        <div id="gallery" class="hidden">
+            <!-- This section will contain the 10 photos -->
+        </div>
+        <div class="indicator" id="audio-indicator">Click on the image for Audio Play/Pause</div> <!-- Indicator for audio -->
+        <button id="meme-generator">Generate Meme</button>
+
+
+    <!-- Script JS -->
+    <script src="{{ url_for('static',filename='meme.js') }}"></script>
+</body>
+</html>
