@@ -86,5 +86,6 @@ setupSurpriseButton();
 
 // Add event listener for "Games" link in the navbar
 document.getElementById("games-link").addEventListener("click", function () {
-  window.location.href = "/templates/games/games.html"; });
+  window.location.href = "/games";
+});
 
