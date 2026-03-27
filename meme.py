@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import json
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates', static_folder='static')
 
 # Placeholder user data
 user_data = {
@@ -101,7 +101,7 @@ def home():
 
 @app.route('/games',methods=['GET'])
 def games():
-    return render_template('/games/games.html')
+    return render_template('games/games.html')
 
 @app.route('/login',methods=['GET'])  
 def login():
