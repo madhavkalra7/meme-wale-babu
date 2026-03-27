@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "https://YOUR_RENDER_SERVICE.onrender.com/$1"
+      "destination": "https://meme-wale-babu.onrender.com"
     }
   ]
 }
