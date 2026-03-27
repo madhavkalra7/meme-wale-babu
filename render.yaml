@@ -3,6 +3,6 @@ services:
     name: meme-wale-babu
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn meme:app
+    startCommand: gunicorn --bind 0.0.0.0:$PORT meme:app
     plan: free
     autoDeploy: true
